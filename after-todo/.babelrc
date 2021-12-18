@@ -1,0 +1,19 @@
+{
+    "presets":[  //配置语法库
+        "@babel/preset-env", 
+        "@babel/preset-react"
+    ],
+    "plugins":[  //语法插件
+        ["@babel/plugin-proposal-decorators",{"legacy":true}],
+        [
+            "@babel/plugin-transform-runtime",  //配置这个插件
+            {
+                "absoluteRuntime":false,
+                "corejs":2,  //核心库版本号
+                "helpers":true,
+                "regenerator":true,  //是否启用regenerator
+                "useESModules":false
+            }
+        ]
+    ]
+}
